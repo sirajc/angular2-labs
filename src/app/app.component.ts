@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app',
+  selector: 'labs-root',
   pipes: [],
   providers: [],
-  directives: [ ],
-  templateUrl: 'app.html',
+  directives: [],
+  templateUrl: 'app.component.html',
 })
-export class App {
+export class AppComponent {
   constructor() {}
 
 }

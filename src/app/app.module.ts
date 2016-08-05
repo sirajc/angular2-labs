@@ -1,8 +1,8 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { App } from './app';
+import { AppComponent } from './app.component';
 
-const components = [ App ];
+const components = [ AppComponent ];
 
 @NgModule(
   {
@@ -14,6 +14,6 @@ const components = [ App ];
 )
 export class LabsApplicationModule {
   constructor(appRef: ApplicationRef) {
-    appRef.bootstrap(App);
+    appRef.bootstrap(AppComponent);
   }
 }
