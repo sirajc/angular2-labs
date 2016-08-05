@@ -1,0 +1,56 @@
+{
+  "name": "angular2-labs",
+  "version": "1.0.0",
+  "description": "Angular2 experiments",
+  "scripts": {
+    "typings-install": "typings install",
+    "postinstall": "npm run typings-install",
+    "build": "webpack --inline --colors --progress --display-error-details --display-cached",
+    "watch": "npm run build -- --watch",
+    "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
+    "start": "npm run server"
+  },
+  "contributors": [
+    "Sirajuddin Choudhary <sirajuddin.c@gmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "angular2-template-loader": "^0.4.0",
+    "awesome-typescript-loader": "^1.1.1",
+    "css-loader": "^0.23.1",
+    "raw-loader": "^0.5.1",
+    "to-string-loader": "^1.1.4",
+    "typescript": "~1.8.9",
+    "typings": "~1.0.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-merge": "^0.8.4"
+  },
+  "dependencies": {
+    "@angular/common": "github:angular/common-builds",
+    "@angular/compiler": "github:angular/compiler-builds",
+    "@angular/core": "github:angular/core-builds",
+    "@angular/http": "github:angular/http-builds",
+    "@angular/platform-browser": "github:angular/platform-browser-builds",
+    "@angular/platform-browser-dynamic": "github:angular/platform-browser-dynamic-builds",
+    "@angular/router": "github:angular/router-builds",
+    "@angular/forms": "github:angular/forms-builds",
+    "core-js": "^2.2.0",
+    "ie-shim": "^0.1.0",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "~0.6.12"
+  },
+  "keywords": [
+    "Angular2",
+    "official angular 2 seed",
+    "angular 2 experiments"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirajc/angular2-labs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sirajc/angular2-labs/issues"
+  },
+  "homepage": "https://github.com/sirajc/angular2-labs#readme"
+}
