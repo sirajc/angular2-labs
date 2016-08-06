@@ -1,12 +1,20 @@
-<h3>
-  Angular 2 Labs
-</h3>
+<header>
+  <h2>
+    Angular 2 Labs
+  </h2>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a [routerLink]="['admin']" routerLinkActive="active">Admin</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main>
 	<router-outlet></router-outlet>
 </main>
 
 
-<footer>
+<footer style="margin-top: 100px; font-size: smaller">
   Sirajuddin Choudhary © 2016
 </footer>

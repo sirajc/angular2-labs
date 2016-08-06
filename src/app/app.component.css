@@ -1,0 +1,23 @@
+li {
+  display: inline;
+  margin-left: 1em;
+}
+
+a {
+  text-decoration: none;
+  background-color: lightgray;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+a, a :visited, a :hover {
+  color: black;
+}
+
+a :hover {
+  background-color: lightskyblue;
+}
+
+.active {
+  background-color: lightcyan;
+}
