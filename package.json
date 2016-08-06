@@ -1,7 +1,7 @@
 {
   "name": "angular2-labs",
-  "version": "1.0.0",
-  "description": "Angular2 experiments",
+  "version": "0.0.1",
+  "description": "Angular2 Labs for experiments",
   "scripts": {
     "typings-install": "typings install",
     "postinstall": "npm run typings-install",
@@ -43,7 +43,11 @@
   "keywords": [
     "Angular2",
     "official angular 2 seed",
-    "angular 2 experiments"
+    "angular 2 labs",
+    "angular2 labs",
+    "angular 2 experiments",
+    "Lazy loading",
+    "NgModule"
   ],
   "repository": {
     "type": "git",

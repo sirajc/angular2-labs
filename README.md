@@ -2,6 +2,13 @@
 
 A project for experimenting the concepts of Angular 2.
 
+### Features
+- bootstrapping AppModule using `bootstrapModule`
+- All Components are part of respective NgModule
+- Route definition in NgModule
+- Lazy Load Module for a Route
+- Webpack
+
 ### Usage
 - Clone or fork this repository
 - Make sure you have [node.js](https://nodejs.org/) installed version 5+
@@ -14,4 +21,8 @@ A project for experimenting the concepts of Angular 2.
 
 ### LICENSE
 MIT
-Built using @angular/angular2-seed
+
+### Credits
+[@angular/angular2-seed](https://github.com/angular/angular2-seed/blob/master/LICENSE)
+[@brandonroberts/angular2-webpack](https://github.com/brandonroberts/angular2-webpack)
+Folks from [Angular 2 Gitter](https://gitter.im/angular/angular)

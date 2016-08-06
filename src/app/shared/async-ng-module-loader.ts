@@ -1,3 +1,8 @@
+/**
+ * This file is copied from https://github.com/brandonroberts/angular2-webpack
+ * Thanks to @brandonroberts for providing this loader, to help load modules lazily
+ */
+
 import { Injectable, NgModuleFactory, NgModuleFactoryLoader, Compiler, Type } from '@angular/core';
 
 class LoaderCallback {
