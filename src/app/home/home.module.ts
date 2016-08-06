@@ -1,19 +1,19 @@
 import { NgModule, ApplicationRef } from '@angular/core';
-import { HomeComponent } from './home.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Route } from '@angular/router';
 
-const components = [ HomeComponent ]
+import { HomeComponent } from './home.component';
+
+const ROUTES: Route[] = [
+  {path: '', component: HomeComponent},
+  {path: 'home', redirectTo: '', pathMatch: 'full'}
+]
 
 @NgModule(
   {
-    declarations: components,
-    imports: [ BrowserModule ],
-    entryComponents: components,
-    bootstrap: components
+    // In all child modules, we have to use `RouterModule.forChild`, `RouterModule.forRoot` is only for root component
+    // because forRoot provides all the router providers and directives, we need not do that again
+    imports: [ RouterModule.forChild(ROUTES) ],
+    declarations: [ HomeComponent ]
   }
 )
-export class HomeModule {
-  constructor(appRef: ApplicationRef) {
-    appRef.bootstrap(HomeComponent);
-  }
-}
+export class HomeModule {}
