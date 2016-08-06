@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
-import { LazyAComponent } from './lazy-a.component';
+import { LazyComponent } from './lazy.component';
 
 export const LAZY_ROUTES: Route[] = [
-  { path: '', component: LazyAComponent }
+  { path: '', component: LazyComponent }
 ]
