@@ -12,6 +12,7 @@ var webpackConfig = {
 
   output: {
     path: './dist',
+    publicPath: '/angular2-labs/'
   },
 
   plugins: [

@@ -2,8 +2,11 @@
 
 A project for experimenting the concepts of Angular 2.
 
+## DEMO
+[Angular2 Labs](https://sirajc.github.io/angular2-labs)
+
 ### Features
-- bootstrapping AppModule using `bootstrapModule`
+- bootstrapping AppModule _(NgModule)_ using `bootstrapModule`
 - All Components are part of respective NgModule
 - Route definition in NgModule
 - Lazy Load Module for a Route
