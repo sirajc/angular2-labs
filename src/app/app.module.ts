@@ -6,23 +6,13 @@ import { AppComponent } from './app.component';
 import { AsyncNgModuleLoader, loadModule } from './shared';
 import { HomeModule } from './home';
 import { AdminModule } from './admin';
-
-const ROUTES: Route[] = [
-  {
-    path: 'lazy',
-    loadChildren: loadModule(() => new Promise(resolve => {
-      (require as any).ensure([], require => {
-        resolve(require('./lazy/lazy.module').LazyModule);
-      });
-    }))
-  }
-]
+import { APP_ROUTES } from './app.routes';
 
 @NgModule(
   {
     // `RouterModule.forRoot([])` is there to provide Router providers and directives to our application
     // additionaly we can use this configure app level routes if any, as of now we have []
-    imports: [ BrowserModule, RouterModule.forRoot(ROUTES), HomeModule, AdminModule ],
+    imports: [ BrowserModule, RouterModule.forRoot(APP_ROUTES), HomeModule, AdminModule ],
 
     providers: [
       // Use custom ng module factory loader
