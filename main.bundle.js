@@ -392,7 +392,7 @@ webpackJsonp([3],{
 /***/ 678:
 /***/ function(module, exports) {
 
-	module.exports = "<header>\r\n  <h2>\r\n    Angular 2 Labs\r\n  </h2>\r\n  <nav>\r\n    <ul>\r\n      <li><a routerLink=\"\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Home</a></li>\r\n      <li><a routerLink=\"admin\" routerLinkActive=\"active\">Admin</a></li>\r\n      <li><a routerLink=\"lazy\" routerLinkActive=\"active\">Lazy</a></li>\r\n    </ul>\r\n  </nav>\r\n</header>\r\n\r\n<main>\r\n\t<router-outlet></router-outlet>\r\n</main>\r\n\r\n\r\n<footer style=\"margin-top: 100px; font-size: smaller\">\r\n  Sirajuddin Choudhary © 2016\r\n</footer>\r\n"
+	module.exports = "<div class=\"app-container\">\r\n  <header>\r\n    <h1>\r\n      Angular 2 Labs\r\n    </h1>\r\n    <nav>\r\n      <ul>\r\n        <li><a routerLink=\"\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">Home</a></li>\r\n        <li><a routerLink=\"admin\" routerLinkActive=\"active\">Admin</a></li>\r\n        <li><a routerLink=\"lazy\" routerLinkActive=\"active\">Lazy</a></li>\r\n      </ul>\r\n    </nav>\r\n  </header>\r\n\r\n  <main>\r\n    <router-outlet></router-outlet>\r\n  </main>\r\n\r\n\r\n  <footer class=\"app-footer\">\r\n    Sirajuddin Choudhary © 2016\r\n  </footer>\r\n</div>"
 
 /***/ },
 
@@ -406,7 +406,7 @@ webpackJsonp([3],{
 /***/ 708:
 /***/ function(module, exports) {
 
-	module.exports = "li {\r\n  display: inline;\r\n  margin-left: 1em;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  background-color: lightgray;\r\n  padding: 0.5em 1em;\r\n  border-radius: 5px;\r\n}\r\n\r\na, a :visited, a :hover {\r\n  color: black;\r\n}\r\n\r\na :hover {\r\n  background-color: lightskyblue;\r\n}\r\n\r\n.active {\r\n  background-color: lightcyan;\r\n}\r\n"
+	module.exports = ".app-container {\r\n  margin: 1rem 2rem;\r\n}\r\n\r\n.app-footer {\r\n  clear: both;\r\n  position: relative;\r\n  height: 3em;\r\n  margin-top: 3em;\r\n  font-size: smaller;\r\n}\r\n\r\nul {\r\n  padding: 0;\r\n  list-style-type: none;\r\n}\r\n\r\nli {\r\n  display: inline;\r\n  margin-left: 1em;\r\n  list-style-type: none;\r\n}\r\n\r\nul :first-child {\r\n  margin-left: 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  background-color: lightgray;\r\n  padding: 0.5em 1em;\r\n  border-radius: 5px;\r\n}\r\n\r\na, a :visited, a :hover {\r\n  color: black;\r\n}\r\n\r\na :hover {\r\n  background-color: lightskyblue;\r\n}\r\n\r\n.active {\r\n  background-color: lightcyan;\r\n}\r\n\r\nmain {\r\n  margin-top: 2rem;\r\n}\r\n"
 
 /***/ }
 
