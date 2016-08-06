@@ -1,15 +1,33 @@
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule, ApplicationRef, NgModuleFactoryLoader } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { Route, RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
+import { AsyncNgModuleLoader, loadModule } from './shared';
 import { HomeModule } from './home';
 import { AdminModule } from './admin';
+
+const ROUTES: Route[] = [
+  {
+    path: 'lazy',
+    loadChildren: loadModule(() => new Promise(resolve => {
+      (require as any).ensure([], require => {
+        resolve(require('./lazy/lazy.module').LazyModule);
+      });
+    }))
+  }
+]
 
 @NgModule(
   {
     // `RouterModule.forRoot([])` is there to provide Router providers and directives to our application
     // additionaly we can use this configure app level routes if any, as of now we have []
-    imports: [ BrowserModule, RouterModule.forRoot([]), HomeModule, AdminModule ],
+    imports: [ BrowserModule, RouterModule.forRoot(ROUTES), HomeModule, AdminModule ],
+
+    providers: [
+      // Use custom ng module factory loader
+      { provide: NgModuleFactoryLoader, useClass: AsyncNgModuleLoader }
+    ],
 
     // We need to declare components which are part of (created for) this module
     declarations: [ AppComponent ],
