@@ -4,17 +4,33 @@
     <meta charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular2 Labs</title>
-    <base href="/">
+    <base href="/angular2-labs">
+
+    <style>
+      html, body {
+        margin: 0;
+      }
+
+      .loading {
+        text-align: center;
+        font-style: italic;
+        font-size: 3rem;
+        background-color: lightcyan;
+        height: 60vh;
+        padding-top: 40vh;
+      }
+    </style>
+
   </head>
   <body>
 
     <labs-root>
-      Loading...
+      <div class="loading">Loading...</div>
     </labs-root>
 
-    <script src="/polyfills.bundle.js"></script>
-    <script src="/vendor.bundle.js"></script>
-    <script src="/main.bundle.js"></script>
+    <script src="/angular2-labs/polyfills.bundle.js"></script>
+    <script src="/angular2-labs/vendor.bundle.js"></script>
+    <script src="/angular2-labs/main.bundle.js"></script>
 
   </body>
 </html>
