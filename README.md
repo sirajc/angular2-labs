@@ -11,6 +11,7 @@ A project for experimenting the concepts of Angular 2.
 - Route definition in NgModule
 - Lazy Load Module for a Route
 - Webpack
+- Unit Testing
 
 ### Usage
 - Clone or fork this repository
@@ -26,6 +27,6 @@ A project for experimenting the concepts of Angular 2.
 MIT
 
 ### Credits
-[@angular/angular2-seed](https://github.com/angular/angular2-seed/blob/master/LICENSE)
-[@brandonroberts/angular2-webpack](https://github.com/brandonroberts/angular2-webpack)
-Folks from [Angular 2 Gitter](https://gitter.im/angular/angular)
+* [@preboot/angular2-webpack](https://github.com/preboot/angular2-webpack)
+* [@brandonroberts/angular2-webpack](https://github.com/brandonroberts/angular2-webpack)
+* Folks from [Angular 2 Gitter](https://gitter.im/angular/angular)

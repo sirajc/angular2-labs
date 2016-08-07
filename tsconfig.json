@@ -12,10 +12,6 @@
   "exclude": [
     "node_modules"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true
-  },
   "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+  "buildOnSave": false
 }
