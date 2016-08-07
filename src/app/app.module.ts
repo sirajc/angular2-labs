@@ -1,9 +1,9 @@
-import { NgModule, ApplicationRef, NgModuleFactoryLoader } from '@angular/core';
+import { NgModule, NgModuleFactoryLoader } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Route, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { AsyncNgModuleLoader, loadModule } from './shared';
+import { AsyncNgModuleLoader } from './shared';
 import { HomeModule } from './home';
 import { AdminModule } from './admin';
 import { APP_ROUTES } from './app.routes';

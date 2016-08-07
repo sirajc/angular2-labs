@@ -17,4 +17,4 @@ export const LAZY_ROUTES: Route[] = [
         }
       ]
   }
-]
+];

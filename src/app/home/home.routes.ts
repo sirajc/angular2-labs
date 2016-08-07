@@ -4,4 +4,4 @@ import { HomeComponent } from './home.component';
 export const HOME_ROUTES: Route[] = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '', pathMatch: 'full' }
-]
+];

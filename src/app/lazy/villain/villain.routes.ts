@@ -5,4 +5,4 @@ import { VillainDetailComponent } from './villain-detail';
 export const VILLAIN_ROUTES: Route[] = [
   { path: '', component: VillainListComponent },
   { path: ':id', component: VillainDetailComponent }
-]
+];

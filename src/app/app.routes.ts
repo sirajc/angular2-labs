@@ -10,4 +10,4 @@ export const APP_ROUTES: Route[] = [
       });
     }))
   }
-]
+];

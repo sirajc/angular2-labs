@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { HOME_ROUTES } from './home.routes'
+import { HOME_ROUTES } from './home.routes';
 
 @NgModule({
   // In all child modules, we have to use `RouterModule.forChild`, `RouterModule.forRoot` is only for root component

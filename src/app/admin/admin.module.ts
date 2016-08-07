@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Route, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AdminHomeComponent } from './admin-home.component';
 import { ADMIN_ROUTES } from './admin.routes';
