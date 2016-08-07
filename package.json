@@ -21,7 +21,6 @@
     "docs": "typedoc --options typedoc.json src/app/app.component.ts",
     "start": "npm run server",
     "postinstall": "npm run webdriver-update && typings install"
-
   },
   "contributors": [
     "Sirajuddin Choudhary <sirajuddin.c@gmail.com>"
@@ -36,7 +35,7 @@
     "@angular/platform-browser": "github:angular/platform-browser-builds",
     "@angular/platform-browser-dynamic": "github:angular/platform-browser-dynamic-builds",
     "@angular/router": "github:angular/router-builds",
-
+    "bootstrap": "^4.0.0-alpha.3",
     "core-js": "^2.2.0",
     "ie-shim": "^0.1.0",
     "rxjs": "5.0.0-beta.6",
