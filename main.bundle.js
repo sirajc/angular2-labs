@@ -5,14 +5,26 @@ webpackJsonp([3],{
 
 	"use strict";
 	var app_1 = __webpack_require__(513);
-	var platform_browser_dynamic_1 = __webpack_require__(330);
+	var platform_browser_dynamic_1 = __webpack_require__(331);
 	platform_browser_dynamic_1.browserDynamicPlatform().bootstrapModule(app_1.LabsApplicationModule)
 	    .catch(function (error) { return console.log("Error bootstrapping App", error); });
 	
 
 /***/ },
 
-/***/ 347:
+/***/ 249:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(514));
+	
+
+/***/ },
+
+/***/ 348:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -43,7 +55,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 348:
+/***/ 349:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -63,25 +75,14 @@ webpackJsonp([3],{
 	    HomeComponent = __decorate([
 	        core_1.Component({
 	            selector: 'labs-home',
-	            template: __webpack_require__(679)
+	            template: __webpack_require__(679),
+	            styles: ["\n    a {\n      background-color: #daa520;\n      padding: 0.5rem 1rem;\n      text-decoration: none;\n      border-radius: 5px;\n      transition: all 0.2s ease;\n    }\n    a:visited {\n      color: inherited;\n    }\n    a:hover {\n      background-color: #f08080;\n    }\n  "]
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], HomeComponent);
 	    return HomeComponent;
 	}());
 	exports.HomeComponent = HomeComponent;
-	
-
-/***/ },
-
-/***/ 349:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(514));
 	
 
 /***/ },
@@ -101,7 +102,7 @@ webpackJsonp([3],{
 	};
 	var core_1 = __webpack_require__(1);
 	var router_1 = __webpack_require__(110);
-	var admin_home_component_1 = __webpack_require__(347);
+	var admin_home_component_1 = __webpack_require__(348);
 	var admin_routes_1 = __webpack_require__(505);
 	var AdminModule = (function () {
 	    function AdminModule() {
@@ -124,7 +125,7 @@ webpackJsonp([3],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var admin_home_component_1 = __webpack_require__(347);
+	var admin_home_component_1 = __webpack_require__(348);
 	exports.ADMIN_ROUTES = [
 	    { path: 'admin', component: admin_home_component_1.AdminHomeComponent }
 	];
@@ -196,7 +197,7 @@ webpackJsonp([3],{
 	var platform_browser_1 = __webpack_require__(86);
 	var router_1 = __webpack_require__(110);
 	var app_component_1 = __webpack_require__(507);
-	var shared_1 = __webpack_require__(349);
+	var shared_1 = __webpack_require__(249);
 	var home_1 = __webpack_require__(512);
 	var admin_1 = __webpack_require__(506);
 	var app_routes_1 = __webpack_require__(509);
@@ -230,7 +231,7 @@ webpackJsonp([3],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var shared_1 = __webpack_require__(349);
+	var shared_1 = __webpack_require__(249);
 	exports.APP_ROUTES = [
 	    {
 	        path: 'lazy',
@@ -260,7 +261,7 @@ webpackJsonp([3],{
 	};
 	var core_1 = __webpack_require__(1);
 	var router_1 = __webpack_require__(110);
-	var home_component_1 = __webpack_require__(348);
+	var home_component_1 = __webpack_require__(349);
 	var home_routes_1 = __webpack_require__(511);
 	var HomeModule = (function () {
 	    function HomeModule() {
@@ -285,7 +286,7 @@ webpackJsonp([3],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var home_component_1 = __webpack_require__(348);
+	var home_component_1 = __webpack_require__(349);
 	exports.HOME_ROUTES = [
 	    { path: '', component: home_component_1.HomeComponent },
 	    { path: 'home', redirectTo: '', pathMatch: 'full' }
@@ -399,14 +400,14 @@ webpackJsonp([3],{
 /***/ 679:
 /***/ function(module, exports) {
 
-	module.exports = "<h4> Home</h4>\r\n\r\n<p> This is home page </p>"
+	module.exports = "<h4> Home</h4>\r\n\r\n<p> This is home page </p>\r\n\r\nLoki can teleport and in Angular you can deeplink to Child Component of a lazily loaded module (VillainModule),\r\nwhich in turn is part of lazily loaded module (LazyModule)<br ><br >\r\n\r\n<a routerLink=\"lazy/villain/100\" >See details of Loki</a>\r\n"
 
 /***/ },
 
 /***/ 708:
 /***/ function(module, exports) {
 
-	module.exports = ".app-container {\r\n  margin: 1rem 2rem;\r\n}\r\n\r\n.app-footer {\r\n  clear: both;\r\n  position: relative;\r\n  height: 3em;\r\n  margin-top: 3em;\r\n  font-size: smaller;\r\n}\r\n\r\nul {\r\n  padding: 0;\r\n  list-style-type: none;\r\n}\r\n\r\nli {\r\n  display: inline;\r\n  margin-left: 1em;\r\n  list-style-type: none;\r\n}\r\n\r\nul :first-child {\r\n  margin-left: 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  background-color: lightgray;\r\n  padding: 0.5em 1em;\r\n  border-radius: 5px;\r\n}\r\n\r\na, a :visited, a :hover {\r\n  color: black;\r\n}\r\n\r\na :hover {\r\n  background-color: lightskyblue;\r\n}\r\n\r\n.active {\r\n  background-color: lightcyan;\r\n}\r\n\r\nmain {\r\n  margin-top: 2rem;\r\n}\r\n"
+	module.exports = ".app-container {\r\n  margin: 1rem 2rem;\r\n}\r\n\r\n.app-footer {\r\n  clear: both;\r\n  position: relative;\r\n  height: 3em;\r\n  margin-top: 3em;\r\n  font-size: smaller;\r\n}\r\n\r\nul {\r\n  padding: 0;\r\n  list-style-type: none;\r\n}\r\n\r\nli {\r\n  display: inline;\r\n  margin-left: 1em;\r\n  list-style-type: none;\r\n}\r\n\r\nul :first-child {\r\n  margin-left: 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  background-color: lightgray;\r\n  padding: 0.5em 1em;\r\n  border-radius: 5px;\r\n  transition: all 0.2s ease;\r\n}\r\n\r\na, a:visited, a:hover {\r\n  color: black;\r\n}\r\n\r\na:hover {\r\n  background-color: lightskyblue;\r\n}\r\n\r\n.active {\r\n  background-color: lightcyan;\r\n}\r\n\r\nmain {\r\n  margin-top: 2rem;\r\n}\r\n"
 
 /***/ }
 
