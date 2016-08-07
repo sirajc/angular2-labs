@@ -1,13 +1,18 @@
 <h4> Lazy Component </h4>
-<ul>
-  <li><a routerLink="." routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Lazy</a></li>
-  <li><a routerLink="villain" routerLinkActive="active">Villains</a></li>
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="." routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Lazy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="villain" routerLinkActive="active">Villains</a>
+  </li>
 </ul>
-
 
 <p> This component is lazily loaded i.e. the code for this module is loaded lazily </p>
 
-<div class="child">
-  <router-outlet></router-outlet>
+<div class="card">
+  <div class="card-block">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <p style="font-size: bigger">Villain is again Lazily loaded</p>

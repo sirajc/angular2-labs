@@ -1,0 +1,9 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li *ngFor="let menuItem of menuItems" [ngClass]="getMenuItemClasses(menuItem)" routerLinkActive="active">
+        <a [routerLink]="[menuItem.path]" [ngClass]="getMenuItemAnchorClasses(menuItem)">{{menuItem.title}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

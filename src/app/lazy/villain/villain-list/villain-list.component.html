@@ -1,4 +1,5 @@
 <h4>Villains of Marvel Universe</h4>
-<ul>
-  <li *ngFor="let villain of villains"><a [routerLink]="villain.id">{{villain.name}}</a></li>
-</ul>
+<div class="list-group">
+  <a class="list-group-item list-group-item-action" *ngFor="let villain of villains"
+    [routerLink]="villain.id">{{villain.name}}</a>
+</div>

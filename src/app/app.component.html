@@ -1,23 +1,14 @@
-<div class="app-container">
-  <header>
-    <h1>
-      Angular 2 Labs
-    </h1>
-    <nav>
-      <ul>
-        <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-        <li><a routerLink="admin" routerLinkActive="active">Admin</a></li>
-        <li><a routerLink="lazy" routerLinkActive="active">Lazy</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <labs-navbar></labs-navbar>
+</header>
 
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+<main>
+  <router-outlet></router-outlet>
+</main>
 
 
-  <footer class="app-footer">
-    Sirajuddin Choudhary © 2016
-  </footer>
-</div>
+<footer>
+  &nbsp;
+  <a class="btn btn-info btn-sm" href="https://github.com/sirajc/angular2-labs">View on Github</a>
+  &nbsp;&nbsp;Sirajuddin Choudhary © 2016
+</footer>

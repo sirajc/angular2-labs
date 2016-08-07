@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import '../style/app.scss';
+
 @Component({
   selector: 'labs-root',
   pipes: [],

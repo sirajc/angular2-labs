@@ -13,19 +13,7 @@ const VILLAINS_DETAILS = [
 
 @Component({
   selector: 'labs-villain-detail',
-  templateUrl: 'villain-detail.component.html',
-  styles: [`
-    a , a :visited {
-      color: inherit;
-      text-decoration: none;
-      background-color: lightblue;
-      padding: 0.5rem 1rem;
-      border-radius: 3px;
-    }
-    a:hover {
-      background-color: lightskyblue;
-    }
-  `]
+  templateUrl: 'villain-detail.component.html'
 })
 export class VillainDetailComponent implements OnInit {
 

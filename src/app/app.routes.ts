@@ -1,5 +1,6 @@
 import { Route } from '@angular/router';
 import { loadModule } from './shared';
+import { AboutComponent } from './about';
 
 export const APP_ROUTES: Route[] = [
   {
@@ -9,5 +10,6 @@ export const APP_ROUTES: Route[] = [
         resolve(require('./lazy/lazy.module').LazyModule);
       });
     }))
-  }
+  },
+  { path: 'about', component: AboutComponent }
 ];

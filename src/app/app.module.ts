@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar';
+import { AboutComponent } from './about';
 import { AsyncNgModuleLoader } from './shared';
 import { HomeModule } from './home';
 import { AdminModule } from './admin';
@@ -20,10 +22,10 @@ import { APP_ROUTES } from './app.routes';
     ],
 
     // We need to declare components which are part of (created for) this module
-    declarations: [ AppComponent ],
+    declarations: [ AppComponent, NavbarComponent, AboutComponent ],
 
     // Components that we need to bootstrap when the module is loaded
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent, NavbarComponent ]
   }
 )
 export class LabsApplicationModule {

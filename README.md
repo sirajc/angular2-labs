@@ -30,3 +30,4 @@ MIT
 * [@preboot/angular2-webpack](https://github.com/preboot/angular2-webpack)
 * [@brandonroberts/angular2-webpack](https://github.com/brandonroberts/angular2-webpack)
 * Folks from [Angular 2 Gitter](https://gitter.im/angular/angular)
+* [Bootstrap v4](https://github.com/twbs/bootstrap/blob/master/LICENSE)
