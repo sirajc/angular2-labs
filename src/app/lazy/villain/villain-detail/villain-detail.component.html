@@ -1,0 +1,11 @@
+<h4>Details of Villain: {{ villain.name }} </h4>
+
+Seen in Movies
+<ul>
+  <li *ngFor="let movie of villain.movies; let last=last">{{movie}}</li>
+</ul>
+
+
+<br >
+<br >
+<a routerLink="..">List Villains</a>

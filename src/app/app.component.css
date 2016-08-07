@@ -30,13 +30,14 @@ a {
   background-color: lightgray;
   padding: 0.5em 1em;
   border-radius: 5px;
+  transition: all 0.2s ease;
 }
 
-a, a :visited, a :hover {
+a, a:visited, a:hover {
   color: black;
 }
 
-a :hover {
+a:hover {
   background-color: lightskyblue;
 }
 

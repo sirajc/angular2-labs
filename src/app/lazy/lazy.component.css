@@ -20,6 +20,10 @@ a {
   border-radius: 3px;
 }
 
+a:hover {
+  background-color: lightskyblue;
+}
+
 .active {
   background-color: lightcyan;
 }
@@ -28,4 +32,6 @@ a {
   border: solid 1px gray;
   border-radius: 5px;
   padding: 0.5rem 2rem;
+  min-height: 15rem;
+  max-width: 30rem;
 }
