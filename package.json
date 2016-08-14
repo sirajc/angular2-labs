@@ -37,6 +37,7 @@
     "@angular/router": "github:angular/router-builds",
     "bootstrap": "^4.0.0-alpha.3",
     "core-js": "^2.2.0",
+    "dygraphs": "^1.1.1",
     "ie-shim": "^0.1.0",
     "rxjs": "5.0.0-beta.6",
     "zone.js": "~0.6.12"

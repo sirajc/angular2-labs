@@ -1,0 +1,12 @@
+<labs-dygraph [initialData]="data" [options]="options" ></labs-dygraph>
+<hr>
+
+<button class="btn btn-sm btn-warning" (click)="initialData()">Reset</button>
+<button class="btn btn-sm btn-primary" (click)="addSeries()">Add Series</button>
+<button class="btn btn-sm btn-danger" (click)="removeSeries()">Remove Series</button>
+<hr>
+<button class="btn btn-sm btn-success" (click)="increment()">Increase Rollup</button>
+<button class="btn btn-sm btn-error" (click)="decrement()">Decrease Rollup</button>
+
+<hr>
+Current Roll Period : {{ rollup }}

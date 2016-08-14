@@ -10,7 +10,8 @@ export const ROUTES: any[] = [
   { path: '', pathMatch: 'full', title: 'Angular 2 Labs', menuType: MenuType.BRAND },
   { path: 'admin', title: 'Admin', menuType: MenuType.LEFT},
   { path: 'lazy', title: 'Lazy', menuType: MenuType.LEFT },
-  { path: 'about', title: 'about', menuType: MenuType.RIGHT }
+  { path: 'dygraph', title: 'Dygraph', menuType: MenuType.LEFT },
+  { path: 'about', title: 'About', menuType: MenuType.RIGHT }
 ];
 
 @Component({
