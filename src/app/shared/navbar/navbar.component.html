@@ -1,8 +1,23 @@
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-  <div class="container-fluid">
+  <div class="clearfix">
+    <button (click)="isCollapsed = !isCollapsed"
+      class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse"
+      data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="true"
+      aria-label="Toggle navigation" style="color: #eee">
+      ☰
+    </button>
+    <a class="navbar-brand hidden-sm-up" [routerLink]="[brandMenu.path]">
+      {{brandMenu.title}}
+    </a>
+  </div>
+  <div class="navbar-toggleable-xs navbar-collapse" id="bd-main-nav" aria-expanded="true" [ngClass]="{collapse: isCollapsed}">
     <ul class="nav navbar-nav">
-      <li *ngFor="let menuItem of menuItems" [ngClass]="getMenuItemClasses(menuItem)" routerLinkActive="active">
-        <a [routerLink]="[menuItem.path]" [ngClass]="getMenuItemAnchorClasses(menuItem)">{{menuItem.title}}</a>
+      <li (click)="isCollapsed = true" class="nav-item" routerLinkActive="active">
+        <a class="navbar-brand hidden-xs-down" [routerLink]="[brandMenu.path]">{{brandMenu.title}}</a>
+      </li>
+      <li (click)="isCollapsed = true" *ngFor="let menuItem of menuItems" class="nav-item" routerLinkActive="active"
+        [ngClass]="getMenuItemClasses(menuItem)">
+        <a class="nav-item nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
       </li>
     </ul>
   </div>

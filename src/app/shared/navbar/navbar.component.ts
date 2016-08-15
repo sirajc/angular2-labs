@@ -6,8 +6,14 @@ export enum MenuType {
   RIGHT
 }
 
-export const ROUTES: any[] = [
-  { path: '', pathMatch: 'full', title: 'Angular 2 Labs', menuType: MenuType.BRAND },
+export interface RouteInfo {
+  path: string;
+  title: string;
+  menuType: MenuType;
+}
+
+export const ROUTES: RouteInfo[] = [
+  { path: '', title: 'Angular 2 Labs', menuType: MenuType.BRAND },
   { path: 'admin', title: 'Admin', menuType: MenuType.LEFT},
   { path: 'lazy', title: 'Lazy', menuType: MenuType.LEFT },
   { path: 'dygraph', title: 'Dygraph', menuType: MenuType.LEFT },
@@ -27,28 +33,22 @@ export const ROUTES: any[] = [
 })
 export class NavbarComponent implements OnInit {
   public menuItems: any[];
+  public brandMenu: any;
+  isCollapsed = true;
 
   constructor() {
 
   }
 
   ngOnInit() {
-    this.menuItems = ROUTES;
+    this.menuItems = ROUTES.filter(menuItem => menuItem.menuType !== MenuType.BRAND);
+    this.brandMenu = ROUTES.filter(menuItem => menuItem.menuType === MenuType.BRAND)[0];
   }
 
   public getMenuItemClasses(menuItem: any) {
     let menuItemClass = {
-      'nav-item': menuItem.menuType === MenuType.LEFT || menuItem.menuType === MenuType.RIGHT,
       'pull-xs-right': menuItem.menuType === MenuType.RIGHT
     };
     return menuItemClass;
-  }
-
-  public getMenuItemAnchorClasses(menuItem: any) {
-    let menuItemAnchorClass = {
-      'navbar-brand': menuItem.menuType === MenuType.BRAND,
-      'nav-link': menuItem.menuType === MenuType.LEFT || menuItem.menuType === MenuType.RIGHT
-    };
-    return menuItemAnchorClass;
   }
 }
