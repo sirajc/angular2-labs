@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TemplateComponent } from './template.component.ts';
 
-import { moduleRoutes } from './template.routes.ts';
+// import { moduleRoutes } from './template.routes.ts';
 
 @NgModule({
-  imports: [ FormsModule, moduleRoutes ],
-  declarations: [ TemplateComponent ]
+  imports: [ FormsModule ],
+  declarations: [ TemplateComponent ],
+  exports: [ TemplateComponent ]
 })
 export class TemplateModule {}
