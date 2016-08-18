@@ -13,7 +13,7 @@ const VILLAINS = [
 @Component({
   selector: 'labs-villain-list',
   templateUrl: 'villain-list.component.html',
-  styleUrls: [ 'villain-list.component.css' ]
+  styleUrls: [ 'villain-list.component.scss' ]
 })
 export class VillainListComponent implements OnInit {
   villains: Array<any> = [];

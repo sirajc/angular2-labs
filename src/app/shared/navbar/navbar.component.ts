@@ -23,13 +23,7 @@ export const ROUTES: RouteInfo[] = [
 @Component({
   selector: 'labs-navbar',
   templateUrl: 'navbar.component.html',
-  styles: [
-    `
-    .active {
-      color: #fff;
-    }
-    `
-  ]
+  styleUrls: [ 'navbar.component.scss' ]
 })
 export class NavbarComponent implements OnInit {
   public menuItems: any[];
@@ -45,10 +39,13 @@ export class NavbarComponent implements OnInit {
     this.brandMenu = ROUTES.filter(menuItem => menuItem.menuType === MenuType.BRAND)[0];
   }
 
+  public get menuIcon(): string {
+    return this.isCollapsed ? '☰' : '✖';
+  }
+
   public getMenuItemClasses(menuItem: any) {
-    let menuItemClass = {
+    return {
       'pull-xs-right': menuItem.menuType === MenuType.RIGHT
     };
-    return menuItemClass;
   }
 }

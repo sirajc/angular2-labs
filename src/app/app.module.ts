@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar';
+import { NavbarModule } from './shared/navbar';
 import { AboutComponent } from './about';
 import { AsyncNgModuleLoader } from './shared';
 import { HomeModule } from './home';
@@ -15,7 +15,7 @@ import { DygraphsModule } from './dygraphs';
   {
     // `RouterModule.forRoot([])` is there to provide Router providers and directives to our application
     // additionaly we can use this configure app level routes if any, as of now we have []
-    imports: [ BrowserModule, RouterModule.forRoot(APP_ROUTES), HomeModule, AdminModule, DygraphsModule ],
+    imports: [ BrowserModule, RouterModule.forRoot(APP_ROUTES), NavbarModule, HomeModule, AdminModule, DygraphsModule ],
 
     providers: [
       // Use custom ng module factory loader
@@ -23,10 +23,10 @@ import { DygraphsModule } from './dygraphs';
     ],
 
     // We need to declare components which are part of (created for) this module
-    declarations: [ AppComponent, NavbarComponent, AboutComponent ],
+    declarations: [ AppComponent, AboutComponent ],
 
     // Components that we need to bootstrap when the module is loaded
-    bootstrap: [ AppComponent, NavbarComponent ]
+    bootstrap: [ AppComponent ]
   }
 )
 export class LabsApplicationModule {
