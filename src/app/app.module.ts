@@ -1,11 +1,10 @@
-import { NgModule, NgModuleFactoryLoader } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarModule } from './shared/navbar';
 import { AboutComponent } from './about';
-import { AsyncNgModuleLoader } from './shared';
 import { HomeModule } from './home';
 import { AdminModule } from './admin';
 import { APP_ROUTES } from './app.routes';
@@ -19,7 +18,7 @@ import { DygraphsModule } from './dygraphs';
 
     providers: [
       // Use custom ng module factory loader
-      { provide: NgModuleFactoryLoader, useClass: AsyncNgModuleLoader }
+      // { provide: SomeClass, useClass: SomeClassImpl }
     ],
 
     // We need to declare components which are part of (created for) this module

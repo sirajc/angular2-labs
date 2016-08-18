@@ -15,6 +15,7 @@ export interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   { path: '', title: 'Angular 2 Labs', menuType: MenuType.BRAND },
   { path: 'admin', title: 'Admin', menuType: MenuType.LEFT},
+  { path: 'forms', title: 'Forms', menuType: MenuType.LEFT},
   { path: 'lazy', title: 'Lazy', menuType: MenuType.LEFT },
   { path: 'dygraph', title: 'Dygraph', menuType: MenuType.LEFT },
   { path: 'about', title: 'About', menuType: MenuType.RIGHT }
