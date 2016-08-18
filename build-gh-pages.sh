@@ -1,7 +1,7 @@
 #!/bin/sh
 echo -e "\e[32mPreparing the build...\e[0m"
 echo ""
-#npm run build
+npm run build
 echo ""
 echo -e "\e[31mCleaning gh-pages\e[0m"
 rm -rf gh-pages/*
@@ -18,5 +18,6 @@ git status
 echo ""
 echo ""
 echo -e "\e[36m======================= Manual Steps ===========================\e[0m"
-echo "Add '/angular2-labs' before '/dygraph-combined.js' in index.html"
+echo "If there are any new assets, add them to sirajc.github.io"
+echo "Commit and Push :)"
 echo -e "\e[36m================================================================\e[0m"
