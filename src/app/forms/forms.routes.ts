@@ -1,16 +1,16 @@
 import { RouterModule, Route } from '@angular/router';
 import { FormsComponent } from './forms.component';
-import { TemplateComponent } from './template/template.component';
-import { ModelControlsComponent } from './model-controls/model-controls.component';
-import { ModelBuilderComponent } from './model-builder/model-builder.component';
+import { TemplateModule } from './template';
+import { ModelControlsModule } from './model-controls';
+import { ModelBuilderModule } from './model-builder';
 
 const ROUTES: Route[] = [
   { path: '', component: FormsComponent,
     children: [
       { path: '', pathMatch: 'full' },
-      { path: 'template', component: TemplateComponent },
-      { path: 'model-form-controls', component: ModelControlsComponent },
-      { path: 'model-form-builder', component: ModelBuilderComponent }
+      { path: 'template', loadChildren: () => TemplateModule },
+      { path: 'model-form-controls', loadChildren: () => ModelControlsModule },
+      { path: 'model-form-builder', loadChildren: () => ModelBuilderModule }
     ]
   }
 ];
