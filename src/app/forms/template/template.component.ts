@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'labs-template',
-  template: 'Hello Template',
+  templateUrl: 'template.component.html'
 })
 export class TemplateComponent {}

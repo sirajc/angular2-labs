@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'labs-model-builder',
-  template: 'Hello Model Builder',
+  templateUrl: 'model-builder.component.html'
 })
 export class ModelBuilderComponent {}
