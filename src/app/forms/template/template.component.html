@@ -7,21 +7,21 @@
           <label for="inputEmail" class="col-sm-3 col-form-label">Email*</label>
           <div class="col-sm-9">
             <input type="email" class="form-control" id="inputEmail3" placeholder="username@domain.com"
-             name="email" required>
+             name="email" required minlength="5">
           </div>
         </div>
         <div class="form-group row">
           <label for="inputFirstName" class="col-sm-3 col-form-label">First Name*</label>
           <div class="col-sm-9">
             <input type="text" class="form-control" id="inputFirstName" placeholder=""
-            name="firstName" required>
+            name="firstName" required maxlength="25">
           </div>
         </div>
         <div class="form-group row">
           <label for="inputLastName" class="col-sm-3 col-form-label">Last Name</label>
           <div class="col-sm-9">
             <input type="text" class="form-control" id="inputLastName" placeholder=""
-              name="lastName" >
+              name="lastName" maxlength="25">
           </div>
         </div>
         <fieldset class="form-group row">
@@ -67,19 +67,23 @@
               name="addressLine2">
           </div>
         </div>
-        <div class="form-group row">
+        <div class="row">
+          <div class="form-group">
             <label for="inputCity" class="col-sm-3 col-form-label">City*</label>
             <div class="col-sm-4">
               <input type="text" class="form-control" id="inputCity" placeholder="City"
                name="city" required>
             </div>
-            <label for="inputZipCode" class="col-sm-2 col-form-label">Zip code*</label>
-            <div class="col-sm-3">
+          </div>
+          <div class="form-group">
+            <label for="inputZipCode" class="col-sm-1 col-form-label">Zip*</label>
+            <div class="col-sm-4">
               <input type="number" class="form-control" id="inputZipCode" placeholder="Zip code"
                name="zipCode" required>
             </div>
+          </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group row" style="margin-top:1.2rem">
           <label for="inputLandmark" class="col-sm-3 col-form-label">Landmark</label>
           <div class="col-sm-9">
             <input type="text" class="form-control" id="inputLandmark" placeholder="Landmark"
@@ -106,7 +110,7 @@
             <label for="inputCountry" class="col-sm-3 col-form-label">Country</label>
             <div class="col-sm-6">
               <select class="custom-select" id="inputCountry" name="country">
-                  <option selected>Select Country</option>
+                  <option value="" selected>Select Country</option>
                   <option value="ALA">Åland Islands</option>
                   <option value="ALB">Albania</option>
                   <option value="DZA">Algeria</option>
