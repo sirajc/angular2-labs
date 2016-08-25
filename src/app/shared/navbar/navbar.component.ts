@@ -18,6 +18,7 @@ export const ROUTES: RouteInfo[] = [
   { path: 'forms', title: 'Forms', menuType: MenuType.LEFT},
   { path: 'lazy', title: 'Lazy', menuType: MenuType.LEFT },
   { path: 'dygraph', title: 'Dygraph', menuType: MenuType.LEFT },
+  { path: 'masonry', title: 'Masonry', menuType: MenuType.LEFT },
   { path: 'about', title: 'About', menuType: MenuType.RIGHT }
 ];
 

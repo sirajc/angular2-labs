@@ -1,0 +1,8 @@
+<p>From data available in component and item templates are created using ngFor</p>
+
+<labs-masonry [options]="masonryOptions" >
+  <div class="grid-sizer"></div>
+  <div class="gutter-sizer"></div>
+  <div *ngFor="let item of items" class="grid-item"
+    [ngClass]="'grid-item--height'+item" >{{ 'Height ' + item }}</div>
+</labs-masonry>

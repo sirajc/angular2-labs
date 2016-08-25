@@ -14,3 +14,7 @@ import 'rxjs';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 import 'bootstrap/dist/css/bootstrap.css';
+
+// Scripts that will run in global context
+import 'script!dygraphs/dygraph-combined-dev.js';
+import 'script!masonry-layout/dist/masonry.pkgd.js';

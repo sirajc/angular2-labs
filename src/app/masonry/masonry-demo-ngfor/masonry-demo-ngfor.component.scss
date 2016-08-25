@@ -1,0 +1,40 @@
+/* ---- grid-item ---- */
+.grid-item {
+  height: 120px;
+  float: left;
+  background: #4CA;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+
+/* 1 columns by default */
+.grid-sizer, .grid-item { width: 100%; }
+.gutter-sizer { width: 0; }
+
+@media screen and (min-width: 544px) {
+  /* 2 columns for big phones */
+  .grid-sizer, .grid-item { width: 48%; }
+  .gutter-sizer { width: 4%; }
+}
+
+@media screen and (min-width: 768px) {
+  /* 3 columns for tablets */
+  .grid-sizer, .grid-item { width: 30.66%; }
+  .gutter-sizer { width: 4%; }
+}
+
+@media screen and (min-width: 1200px) {
+  /* 4 columns for larger screens and desktops */
+  .grid-sizer, .grid-item { width: 22%; }
+  .gutter-sizer { width: 4%; }
+}
+
+.grid-item {
+  margin-bottom: 1em;
+}
+

@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.labs-masonry-grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.labs-masonry-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+

@@ -39,6 +39,7 @@
     "core-js": "^2.2.0",
     "dygraphs": "^1.1.1",
     "ie-shim": "^0.1.0",
+    "masonry-layout": "^4.1.1",
     "rxjs": "5.0.0-beta.6",
     "zone.js": "~0.6.12"
   },
@@ -74,6 +75,7 @@
     "remap-istanbul": "^0.6.4",
     "rimraf": "^2.5.1",
     "sass-loader": "^4.0.0",
+    "script-loader": "^0.7.0",
     "shelljs": "^0.7.0",
     "style-loader": "^0.13.0",
     "ts-helpers": "^1.1.1",
