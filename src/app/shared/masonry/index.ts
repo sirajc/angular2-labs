@@ -1,2 +1,2 @@
 export * from './masonry-options';
-export * from './masonry.module.ts';
+export * from './masonry.module';

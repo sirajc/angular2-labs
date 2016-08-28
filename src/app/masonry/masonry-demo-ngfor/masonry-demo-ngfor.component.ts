@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MasonryOptions } from './../../shared/masonry/masonry-options';
+import { MasonryOptions } from '../../shared/masonry/masonry-options';
 
 @Component({
   selector: 'labs-masonry-demo-ngfor',

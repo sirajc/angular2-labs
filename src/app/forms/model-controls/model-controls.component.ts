@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { validateEmailFactory } from './../../shared/validators/email.validator';
-import { CheckboxValidator } from './../../shared/validators/checkbox-checked.validator';
+import { validateEmailFactory } from '../../shared/validators/email.validator';
+import { CheckboxValidator } from '../../shared/validators/checkbox-checked.validator';
 
 @Component({
   selector: 'labs-model-controls',

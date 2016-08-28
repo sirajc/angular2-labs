@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Route, RouterModule } from '@angular/router';
 import { DygraphModule } from './dygraph';
-import { DygraphsComponent } from './dygraphs.component.ts';
+import { DygraphsComponent } from './dygraphs.component';
 import { DataService } from './shared/data.service';
 
 const ROUTES: Route[] = [
