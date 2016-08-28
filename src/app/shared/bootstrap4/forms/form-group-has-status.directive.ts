@@ -1,17 +1,22 @@
 import { Directive, HostBinding, ContentChild, AfterViewInit } from '@angular/core';
-import { FormControl, NgModel } from '@angular/forms';
+import { AbstractControl, NgModel, FormControlName } from '@angular/forms';
 
 // tslint:disable-next-line
 @Directive({selector: 'div.form-group,fieldset.form-group'})
 export class FormGroupHasStatusDirective implements AfterViewInit {
 
   @ContentChild(NgModel) input: NgModel;
-  private control: FormControl;
+  @ContentChild(FormControlName) formControl: FormControlName;
+  private control: AbstractControl;
 
   constructor() {}
 
   ngAfterViewInit() {
-    this.control = this.input && this.input.control;
+    if (this.input) {
+      this.control = this.input.control;
+    } else if (this.formControl) {
+      this.control = this.formControl.control;
+    }
   }
 
   @HostBinding('class.has-success') get valid() {

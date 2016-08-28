@@ -1,6 +1,11 @@
 import { Directive, forwardRef } from '@angular/core';
 import { FormControl, NG_VALIDATORS } from '@angular/forms';
 
+export class CheckboxValidator {
+  static checked(c: FormControl) {
+    return new CheckboxCheckedValidator().validate(c);
+  }
+}
 
 @Directive({
   // tslint:disable-next-line

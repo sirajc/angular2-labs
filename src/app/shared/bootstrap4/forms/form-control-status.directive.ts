@@ -1,21 +1,29 @@
-import { Directive, HostBinding } from '@angular/core';
-import { FormControl, NgModel } from '@angular/forms';
+import { AfterViewInit, Directive, HostBinding, ContentChild } from '@angular/core';
+import { NgModel, AbstractControl, FormControlName } from '@angular/forms';
 
 // tslint:disable-next-line
-@Directive({selector: '[ngModel]'})
-export class FormControlStatusDirective {
+@Directive({selector: '[ngModel],[formControlName]'})
+export class FormControlStatusDirective implements AfterViewInit {
 
-  private control: FormControl;
+  @ContentChild(NgModel) private input: NgModel;
+  @ContentChild(FormControlName) private formControl: FormControlName;
+  private control: AbstractControl;
 
-  constructor(ngModel: NgModel) {
-    this.control = ngModel.control;
+  constructor() {}
+
+  ngAfterViewInit() {
+    if (this.input) {
+      this.control = this.input.control;
+    } else if (this.formControl) {
+      this.control = this.formControl.control;
+    }
   }
 
   @HostBinding('class.form-control-success') get valid() {
-    return this.control.dirty && this.control.valid;
+    return !this.control ? false : this.control.dirty && this.control.valid;
   }
 
   @HostBinding('class.form-control-danger') get invalid() {
-    return this.control.touched && this.control.invalid;
+    return !this.control ? false : this.control.touched && this.control.invalid;
   }
 }
