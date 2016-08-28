@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <form novalidate>
+      <form [formGroup]="form" (ngSubmit)="signUp(form.value)" novalidate>
         <div class="card card-signup">
           <div class="card-header">Profile</div>
           <div class="card-block">
@@ -9,33 +9,33 @@
               <label for="inputEmail" class="col-sm-3 col-form-label">Email*</label>
               <div class="col-sm-9">
                 <input type="email" class="form-control" id="inputEmail3" placeholder="username@domain.com"
-                name="email" required minlength="5">
+                formControlName="email" required minlength="5">
               </div>
             </div>
             <div class="form-group row">
               <label for="inputFirstName" class="col-sm-3 col-form-label">First Name*</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" id="inputFirstName" placeholder=""
-                name="firstName" required maxlength="25">
+                formControlName="firstName" pattern="[A-Za-z .]*" required maxlength="25">
               </div>
             </div>
             <div class="form-group row">
               <label for="inputLastName" class="col-sm-3 col-form-label">Last Name</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" id="inputLastName" placeholder=""
-                  name="lastName" maxlength="25">
+                  formControlName="lastName" pattern="[A-Za-z .]*" maxlength="25">
               </div>
             </div>
             <fieldset class="form-group row">
               <legend class="col-form-legend col-sm-3">Gender</legend>
               <div class="col-sm-9  form-radio">
                 <label class="custom-control custom-radio">
-                  <input id="inputMale" name="gender" type="radio" class="custom-control-input">
+                  <input id="inputMale" formControlName="gender" type="radio" class="custom-control-input" value="Male">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Male</span>
                 </label>
                 <label class="custom-control custom-radio">
-                  <input id="inputFemale" name="gender" type="radio" class="custom-control-input">
+                  <input id="inputFemale" formControlName="gender" type="radio" class="custom-control-input" value="Female">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Female</span>
                 </label>
@@ -44,7 +44,7 @@
             <div class="form-group row">
               <div class="offset-sm-3 col-sm-9">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" name="notrobot" class="custom-control-input" required>
+                  <input type="checkbox" formControlName="notrobot" class="custom-control-input" required>
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">I am not a Robot*</span>
                 </label>
@@ -52,21 +52,21 @@
             </div>
           </div>
         </div>
-        <div class="card card-signup">
+        <div class="card card-signup" formGroupName="address">
           <div class="card-header">Address</div>
           <div class="card-block">
             <div class="form-group row">
               <label for="inputAddressLine1" class="col-sm-3 col-form-label">Address Line 1*</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" id="inputAddressLine1" placeholder="Room/Flat/Plot No. Locality"
-                  name="addressLine1" required>
+                  formControlName="addressLine1" required>
               </div>
             </div>
             <div class="form-group row">
               <label for="inputAddressLine2" class="col-sm-3 col-form-label">Address Line 2</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" id="inputAddressLine2" placeholder="Street, Area"
-                  name="addressLine2">
+                  formControlName="addressLine2">
               </div>
             </div>
             <div class="row">
@@ -74,14 +74,14 @@
                 <label for="inputCity" class="col-sm-3 col-form-label">City*</label>
                 <div class="col-sm-4">
                   <input type="text" class="form-control" id="inputCity" placeholder="City"
-                  name="city" required>
+                  formControlName="city" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputZipCode" class="col-sm-1 col-form-label">Zip*</label>
                 <div class="col-sm-4">
                   <input type="number" class="form-control" id="inputZipCode" placeholder="Zip code"
-                  name="zipCode" required>
+                  formControlName="zipCode" required>
                 </div>
               </div>
             </div>
@@ -89,19 +89,19 @@
               <label for="inputLandmark" class="col-sm-3 col-form-label">Landmark</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" id="inputLandmark" placeholder="Landmark"
-                name="landmark" >
+                formControlName="landmark" >
               </div>
             </div>
             <fieldset class="form-group row">
                 <legend class="col-form-legend col-sm-3">Type</legend>
                 <div class="col-sm-9 form-radio">
                   <label class="custom-control custom-radio">
-                    <input id="inputResidence" name="addressType" type="radio" class="custom-control-input">
+                    <input id="inputResidence" formControlName="addressType" type="radio" class="custom-control-input" value="Residence">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Residence</span>
                   </label>
                   <label class="custom-control custom-radio">
-                    <input id="inputOffice" name="addressType" type="radio" class="custom-control-input">
+                    <input id="inputOffice" formControlName="addressType" type="radio" class="custom-control-input" value="Office">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Office</span>
                   </label>
@@ -111,7 +111,7 @@
               <div class="form-group">
                 <label for="inputCountry" class="col-sm-3 col-form-label">Country</label>
                 <div class="col-sm-6">
-                  <select class="custom-select" id="inputCountry" name="country">
+                  <select class="custom-select" id="inputCountry" formControlName="country">
                       <option value="" selected>Select Country</option>
                       <option value="ALA">Åland Islands</option>
                       <option value="ALB">Albania</option>
@@ -367,13 +367,14 @@
             </div>
           </div>
         </div>
-        <div class="form-group row">
+        <div class="row">
           <div class="offset-sm-2 col-sm-9">
-            <button type="submit" class="btn btn-primary">Sign up</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Sign up</button>
+            Your form is {{form.valid ? 'valid' : 'invalid'}}
           </div>
         </div>
       </form>
     </div>
-    <div class="col-md-4 jumbotron"></div>
+    <div class="col-md-4 jumbotron">{{ form.value | json }}</div>
   </div>
 </div>
