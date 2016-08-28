@@ -17,7 +17,10 @@ A project for experimenting the concepts of Angular 2.
 - Dygraphs Integration
 - Masonry Integration
 - Forms
-  - Template Driven Forms
+  - Template Driven Forms [View changes](https://github.com/sirajc/angular2-labs/commit/da5f6d57386df8e5b4b1a346764e26905fe0f87a)
+  - Model Driven Forms
+	 - using FormControls [View changes](https://github.com/sirajc/angular2-labs/commit/1075294183194e14f966b54d26d4c8df679f49c9)
+	 - using FormBuilder [View changes](https://github.com/sirajc/angular2-labs/commit/6dd7cd7de0538cd44a56cb18fbc5abc48346e1bc)
 
 ### Usage
 - Clone or fork this repository

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { validateEmailFactory } from '../../shared/validators/email.validator';
 import { CheckboxValidator } from '../../shared/validators/checkbox-checked.validator';
