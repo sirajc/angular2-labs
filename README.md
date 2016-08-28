@@ -64,3 +64,8 @@ A project for experimenting the concepts of Angular 2.
 * [Bootstrap v4](https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * [Dygraphs](https://github.com/danvk/dygraphs)
 * [Masonry](https://github.com/desandro/masonry)
+* [SPA on gh-pages](https://github.com/rafrex/spa-github-pages)
+
+### Resources
+* [Forms: Kara's Webinar](https://www.youtube.com/watch?v=E92KS_YCSf8)
+* [Forms: Cory's Blog](https://coryrylan.com/blog/angular-2-form-builder-and-validation-management)
