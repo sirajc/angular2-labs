@@ -16,7 +16,9 @@ export class DygraphsComponent implements OnInit {
     ylabel: 'Variation',
     xlabel: 'Time',
     legend: 'always',
-    rollPeriod: 7
+    rollPeriod: 7,
+    width: 1000,
+    height: 500
   };
 
   constructor(private dataService: DataService) {}

@@ -35,13 +35,13 @@
     "@angular/platform-browser": "github:angular/platform-browser-builds",
     "@angular/platform-browser-dynamic": "github:angular/platform-browser-dynamic-builds",
     "@angular/router": "github:angular/router-builds",
-    "bootstrap": "^4.0.0-alpha.3",
-    "core-js": "^2.2.0",
+    "bootstrap": "^4.0.0-alpha.4",
+    "core-js": "^2.4.1",
     "dygraphs": "^1.1.1",
     "ie-shim": "^0.1.0",
     "masonry-layout": "^4.1.1",
-    "rxjs": "5.0.0-beta.6",
-    "zone.js": "~0.6.12"
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "0.6.23"
   },
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
